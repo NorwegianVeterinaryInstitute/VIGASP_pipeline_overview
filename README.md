@@ -6,17 +6,17 @@
 
 ## List of Pipelines
 1. Assembly and Annotation Pipeline
-2. Assembly_QC Pipeline
-3. MLST Pipeline NVI
-4. Phylo-CoreGenomeSNP Pipeline
-5. Reads_QC Pipeline
-6. ResPointFinder
-7. ResPointFinder2 (EFSA 2022)
-8. SISTR Pipeline v1.1.1 (NVI)
-9. SeroTypeFinder Pipeline
-10. Species Abundance Pipeline
-11. Virulence_Finder
-12. spaTyper Pipeline
+2. MLST Pipeline NVI - Modified by NVI
+3. SISTR Pipeline v1.1.1 (NVI) - Modified by NVI
+4. Species Abundance Pipeline - Modified by NVI
+5. Assembly_QC Pipeline - NVI Developed 
+6. Phylo-CoreGenomeSNP Pipeline - NVI Developed 
+7. Reads_QC Pipeline - NVI Developed 
+8. ResPointFinder - NVI Developed 
+9. ResPointFinder2 (EFSA 2022) - NVI Developed  
+10. SeroTypeFinder Pipeline - NVI Developed  
+11. Virulence_Finder - NVI Developed 
+12. spaTyper Pipeline - NVI Developed 
 
 ## Validation 
 1. SeroTypeFinder:
@@ -37,9 +37,10 @@
 2. SeroTypeFinder - Beginning of March or earlier
    - small Change in output format to "Linelist" 
 
-3. Species Abundance Pipeline:
+3. Species Abundance Pipeline and Reads_QC:
    - Update Kraken2 DB version to the latest (Oct 2023)
      Note:  Discuss with Thomas before  
+   - Both the pipelines use Kraken2. So, most likely, we can remove the "Species Abundance Pipeline"
 
 ## New Pipelines: 
 1. Kleborate - Klebsilla
