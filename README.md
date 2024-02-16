@@ -6,10 +6,10 @@
 
 ## List of Pipelines
 1. Assembly and Annotation Pipeline
-2. MLST Pipeline NVI - Modified by NVI
+2. MLST Pipeline NVI           - Modified by NVI
 3. SISTR Pipeline v1.1.1 (NVI) - Modified by NVI
-4. Species Abundance Pipeline - Modified by NVI
-5. Assembly_QC Pipeline - NVI Developed 
+4. Species Abundance Pipeline  - Modified by NVI
+5. Assembly_QC Pipeline        - NVI Developed 
 6. Phylo-CoreGenomeSNP Pipeline - NVI Developed 
 7. Reads_QC Pipeline - NVI Developed 
 8. ResPointFinder - NVI Developed 
@@ -19,11 +19,11 @@
 12. spaTyper Pipeline - NVI Developed 
 
 ## Validation 
-1. SeroTypeFinder:
+1. SeroTypeFinder:<br>
    Draft is ready and Camilla has given her comments to finish. Jeevan has to update the document
-2. SpaTyper:
+2. SpaTyper:<br>
    Draft is ready and Jannice has given her comments. Waiting for Marianne to send her comments to finish.
-3. CoreGenomeSNP_Phylo (ALPPACA):
+3. CoreGenomeSNP_Phylo (ALPPACA):<br>
    Tools are updated to the latest ALPPACA version. Draft is not rady yet since we need to rerun and update the numbers. 
    
 
