@@ -29,13 +29,18 @@
 
 ## Waiting for updates: 
 1. ResPointFinder2 - End of Feb 2024
-    - Update the ResPointFinder tool 
-    - Update the ResFinder DB
-    - Update the PointFinder DB
-    - Update the DisinFinder DB
+    - Update the ResPointFinder tool to 4.4.2
+    - Update the ResFinder DB to 2.2.1
+    - Update the PointFinder DB to 4.0.1
+    - Update the DisinFinder DB 2.0.1
+   
+Associated issue: <br>
+https://github.com/NorwegianVeterinaryInstitute/irida-plugin-ResPointFinder2/issues/16
 
 2. SeroTypeFinder - Beginning of March or earlier
-   - small Change in output format to "Linelist" 
+   - small Change in output format to "Linelist"
+Associated issue:
+https://github.com/NorwegianVeterinaryInstitute/irida-nvi-serotypefinder/issues/6
 
 3. Species Abundance Pipeline and Reads_QC:
    - Update Kraken2 DB version to the latest (Oct 2023)
