@@ -37,6 +37,10 @@
 2. SeroTypeFinder - Beginning of March or earlier
    - small Change in output format to "Linelist" 
 
+3. Species Abundance Pipeline:
+   - Update Kraken2 DB version to the latest (Oct 2023)
+     Note:  Discuss with Thomas before  
+
 ## New Pipelines: 
 1. Kleborate - Klebsilla
 2. Sequence depth (qualimap2) - Requested by Eve 
