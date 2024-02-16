@@ -16,8 +16,12 @@
 9. ResPointFinder2 (EFSA 2022) - NVI Developed  
 10. SeroTypeFinder Pipeline - NVI Developed  
 11. Virulence_Finder - NVI Developed 
-12. spaTyper Pipeline - NVI Developed 
+12. spaTyper Pipeline - NVI Developed
 
+## Bug fixes: 
+ - Reads_QC output "Coverage" is outputed as string. That messes up the sorting
+Issue: <br> 
+https://github.com/NorwegianVeterinaryInstitute/irida-plugin-readsQC/issues/15
 ## Validation 
 1. SeroTypeFinder:<br>
    Draft is ready and Camilla has given her comments to finish. Jeevan has to update the document
@@ -39,7 +43,7 @@ https://github.com/NorwegianVeterinaryInstitute/irida-plugin-ResPointFinder2/iss
 
 2. SeroTypeFinder - Beginning of March or earlier
    - small Change in output format to "Linelist"
-Associated issue:
+Associated issue:<br>
 https://github.com/NorwegianVeterinaryInstitute/irida-nvi-serotypefinder/issues/6
 
 3. Species Abundance Pipeline and Reads_QC:
