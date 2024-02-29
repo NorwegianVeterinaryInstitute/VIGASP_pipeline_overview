@@ -1,7 +1,7 @@
 ## Assembly Annotation
-### Assembly - Shovill
-### Annotation - Prokka 
-### ASsembly stats - Quast
+### Assembly - Shovill 1.0.4 
+### Annotation - Prokka 1.14.5
+### Assembly Quality stats - Quast 5.0.2
 
 ## Assembly_QC
 ### Assembly - Shovill
