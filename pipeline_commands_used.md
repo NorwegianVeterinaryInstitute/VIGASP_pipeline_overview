@@ -3,17 +3,22 @@
 ### Annotation - Prokka 1.14.5
 ### Assembly Quality stats - Quast 5.0.2
 
-## Assembly_QC
-### Assembly - Shovill
+## Assembly_QC    
+### Assembly - Shovill 1.0.4  
+### CheckM analyze 1.2.0
+### Quast 5.0.2
+### CheckM qa   1.2.0
 
 ## SpaTyper 
-### Assembly - Shovill
+### Assembly - Shovill 1.1.0
+### spaTyper 0.3.3
 
 ## MLST
 ### Assembly - Shovill
 
 ## SISTR
-### Assembly - Shovill
+### Assembly - Shovill 1.1.0     
+### SISTR - 1.1.1
 
 ## CoreGenomeSNP_Phylogeny
 ### Assembly - Shovill
