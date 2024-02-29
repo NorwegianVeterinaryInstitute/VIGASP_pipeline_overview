@@ -14,7 +14,9 @@
 ### spaTyper 0.3.3
 
 ## MLST
-### Assembly - Shovill
+### Assembly - Shovill 1.0.4 
+### QUAST 5.0.2
+### MLST 2.16.1
 
 ## SISTR
 ### Assembly - Shovill 1.1.0     
