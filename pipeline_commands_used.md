@@ -63,6 +63,14 @@ spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --t
 
 ## CoreGenomeSNP_Phylogeny
 #### Assembly - Shovill 1.1.0
+```
+shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --opts --threads 16 --memory 64 --tmp-dir /opt/galaxy/tmp/ --nocorr --minlen 0 --mincov 2 --assembler spades
+```
+
+```
+spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111 --threads 16 --memory 64 --tmp-dir /opt/galaxy/tmp/ --merged flash.extendedFrags.fastq.gz
+```
+
 #### ParSNP - 2.0.3
 #### HarvestTools - 1.2.0
 #### Gubbins - 3.2.0
