@@ -86,6 +86,9 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 
 ## ResPointFinder3 - Updated once a year
 #### ResPointFinder 4.4.2
+```
+python -m resfinder -o .  -s "$species_name" -l 0.6 -t 0.8 --acquired --point --disinfectant -ifq R1.fastq R2.fastq -db_res resfinder_db_2.2.1/ -db_point pointfinder_db_4.0.1/ -db_disinf disinfinder_db_2.0.1/
+```  
 #### ResFinder DB 2.2.1
 #### PointFinder DB 4.0.1
 #### DisinFinder DB 2.0.1
@@ -94,15 +97,16 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 
 ## ResPointFinder2
 #### ResPointFinder EFSA_2022
+```
+python run_resfinder.py -o .  -s "$species_name" -l 0.6 -t 0.8 --acquired --point -ifq R1.fastq R2.fastq -db_res db_resfinder/ -db_point db_pointfinder/
+```
 #### ResFinder DB EFSA_2022
 #### PointFinder DB EFSA_2022
-```
-```
 
 ## ResPointFinder - Updated regularly 
-#### ResPointFinder EFSA_2022
-#### ResFinder DB EFSA_2022
-#### PointFinder DB EFSA_2022
+#### ResPointFinder EFSA_2021
+#### ResFinder DB EFSA_2021
+#### PointFinder DB EFSA_2021
 ```
 ```
 
