@@ -79,7 +79,34 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 #### SNP Distance - 0.8.2
 
 ## Reads_QC 
-#### Fastq Stats - FastQC
+#### Fastq Stats - FastQC 0.73
 #### Species/contamination prediction - kraken2
 #### Species abundance - bracken
 
+## ResPointFinder3 - Updated once a year
+#### ResPointFinder 4.4.2
+#### ResFinder DB 2.2.1
+#### PointFinder DB 4.0.1
+#### DisinFinder DB 2.0.1
+```
+```
+
+## ResPointFinder2
+#### ResPointFinder EFSA_2022
+#### ResFinder DB EFSA_2022
+#### PointFinder DB EFSA_2022
+```
+```
+
+## ResPointFinder - Updated regularly 
+#### ResPointFinder EFSA_2022
+#### ResFinder DB EFSA_2022
+#### PointFinder DB EFSA_2022
+```
+```
+
+## VirulenceFinder 
+#### VirulenceFindere 2.0.4
+
+## SeroTypeFinder
+#### SeroTypeFinder 2.0.2
