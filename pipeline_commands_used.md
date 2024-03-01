@@ -38,11 +38,27 @@ spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --t
 
 ## MLST
 #### Assembly - Shovill 1.0.4 
+```
+shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R.fastq --trim --namefmt contig%05d --depth 100 --opts --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --minlen 1 --mincov 2 --assembler spades
+```
+
+```
+spades.py --pe1-1 R1.fastq.gz --pe1-2 R2.fastq --only-assembler --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,55,79,103,127 --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --pe1-m flash.extendedFrags.fastq.gz
+```
+
 #### QUAST 5.0.2
 #### MLST 2.16.1
 
 ## SISTR
 #### Assembly - Shovill 1.1.0     
+```
+shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --opts --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --minlen 1 --mincov 1 --assembler spades
+```
+
+```
+spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111 --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --merged flash.extendedFrags.fastq.gz
+```
+
 #### SISTR - 1.1.1
 
 ## CoreGenomeSNP_Phylogeny
