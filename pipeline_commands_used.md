@@ -3,7 +3,7 @@
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --minlen 0 --mincov 0 --assembler spades
 ```
-
+#### SPAdes v3.13.0
 ```
 spades.py --pe1-1 1.fastq.gz --pe1-2 2.fastq.gz --only-assembler --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111  --pe1-m flash.extendedFrags.fastq
 ```
@@ -16,7 +16,7 @@ spades.py --pe1-1 1.fastq.gz --pe1-2 2.fastq.gz --only-assembler --threads 8 --m
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --trim --namefmt contig%05d --depth 100 --opts --threads 4 --memory 16 --tmp-dir /opt/galaxy/temp/ --minlen 0 --mincov 2 --assembler spades
 ```
-
+#### SPAdes v3.13.0
 ```
 spades.py	--pe1-1	R1.fastq	--pe1-2	R2.fastq	--only-assembler	--threads	8	--memory	4	-o	spades	--tmp-dir	/opt/galaxy/tmp	-k	31,51,71,91,111	--threads	4	--memory	16	--tmp-dir	/opt/galaxy/temp	--pe1-m	flash.extendedFrags.fastq.gz	
 ```
@@ -29,6 +29,7 @@ spades.py	--pe1-1	R1.fastq	--pe1-2	R2.fastq	--only-assembler	--threads	8	--memor
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --opts --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --nocorr --minlen 0 --mincov 2 --assembler spades
 ```
+#### SPAdes genome assembler v3.15.3
 
 ```
 spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111 --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --merged flash.extendedFrags.fastq.gz
@@ -41,7 +42,7 @@ spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --t
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R.fastq --trim --namefmt contig%05d --depth 100 --opts --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --minlen 1 --mincov 2 --assembler spades
 ```
-
+#### SPAdes v3.13.0
 ```
 spades.py --pe1-1 R1.fastq.gz --pe1-2 R2.fastq --only-assembler --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,55,79,103,127 --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --pe1-m flash.extendedFrags.fastq.gz
 ```
@@ -54,7 +55,7 @@ spades.py --pe1-1 R1.fastq.gz --pe1-2 R2.fastq --only-assembler --threads 8 --me
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --opts --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --minlen 1 --mincov 1 --assembler spades
 ```
-
+#### SPAdes v3.15.3
 ```
 spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111 --threads 16 --memory 32 --tmp-dir /opt/galaxy/tmp/ --merged flash.extendedFrags.fastq.gz
 ```
@@ -66,7 +67,7 @@ spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --t
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --opts --threads 16 --memory 64 --tmp-dir /opt/galaxy/tmp/ --nocorr --minlen 0 --mincov 2 --assembler spades
 ```
-
+#### SPAdes v3.15.3
 ```
 spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111 --threads 16 --memory 64 --tmp-dir /opt/galaxy/tmp/ --merged flash.extendedFrags.fastq.gz
 ```
