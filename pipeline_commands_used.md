@@ -1,3 +1,6 @@
+# Here are the commands used VIGASP pipelines.
+Input file names, DB locations are shortened to make the commands easy to read. 
+
 ## Assembly Annotation
 #### Assembly - Shovill 1.0.4 
 ```
