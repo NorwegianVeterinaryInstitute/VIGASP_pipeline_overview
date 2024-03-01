@@ -104,14 +104,21 @@ python run_resfinder.py -o .  -s "$species_name" -l 0.6 -t 0.8 --acquired --poin
 #### PointFinder DB EFSA_2022
 
 ## ResPointFinder - Updated regularly 
+```
+python3 run_resfinder.py -ifq R1.fastq R2.fastq -s "$species_name" -o . -db_res db_resfinder/ -db_point db_pointfinder/ --acquired --point -t 0.9 -l 0.6 -t_p 0.9 -l_p 0.6
+```
 #### ResPointFinder EFSA_2021
 #### ResFinder DB EFSA_2021
 #### PointFinder DB EFSA_2021
-```
-```
+
 
 ## VirulenceFinder 
 #### VirulenceFindere 2.0.4
-
+```
+python3 virulencefinder.py -i $input1.forward $input1.reverse -x -o output -p   virulencefinder_db/ --speciesinfo_json "{\"$species_name\":\"tax\"}" -t $identity -l $length
+```
 ## SeroTypeFinder
 #### SeroTypeFinder 2.0.2
+```
+serotypefinder -x -i $infile -l 0.60 -t 0.85
+```
