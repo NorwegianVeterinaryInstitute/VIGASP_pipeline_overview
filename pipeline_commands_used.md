@@ -107,6 +107,7 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 #### HarvestTools - 1.2.0
 #### Gubbins - 3.2.0
 #### MaskGubbins 
+#### SNP_SITES
 #### IQ-TREE - 2.2.6
 #### SNP Distance - 0.8.2
 
