@@ -6,9 +6,37 @@ Input file names, DB locations are shortened to make the commands easy to read.
 ```
 shovill --outdir out --cpus 8 --ram 4 --R1 R1.fastq --R2 R2.fastq --namefmt contig%05d --depth 100 --minlen 0 --mincov 0 --assembler spades
 ```
+
+### Trimmomatic
+```
+trimmomatic PE -threads 8 -phred33 \/opt\/irida\/data\/sequence\/15325\/2\/240423_M06578\.Aga32_S15_R1_001\.fastq \/opt\/irida\/data\/sequence\/15326\/2\/240423_M06578\.Aga32_S15_R2_001\.fastq R1.fq.gz /dev/null R2.fq.gz /dev/null ILLUMINACLIP:/opt/galaxy/21.09/database/dependencies/_conda/envs/__shovill@1.0.4/db/trimmomatic.fa:1:30:11 LEADING:3 TRAILING:3 MINLEN:30 TOPHRED33 2>&1 | sed 's/^/[trimmomatic] /' | tee -a shovill.log
+```
+
 #### SPAdes v3.13.0
 ```
 spades.py --pe1-1 1.fastq.gz --pe1-2 2.fastq.gz --only-assembler --threads 8 --memory 4 -o spades --tmp-dir /opt/galaxy/tmp -k 31,51,71,91,111  --pe1-m flash.extendedFrags.fastq
+```
+
+### BWA
+```
+bwa index spades.fasta 2>&1 | sed 's/^/[bwa-index] /' | tee -a shovill.log
+```
+
+### samtools
+```
+samtools faidx spades.fasta 2>&1 | sed 's/^/[faidx] /' | tee -a shovill.log
+```
+
+### BWA & samclip & samtools
+```
+(bwa mem -v 3 -x intractg -t 8 spades.fasta R1.fq.gz R2.fq.gz | samclip --ref spades.fasta.fai | samtools sort --threads 1 -m 2048m --reference spades.fasta -T /opt/galaxy/tmp/samtools.3228369 -o shovill.bam) 2>&1 | sed 's/^/[bwa+samtools-sort] /' | tee -a shovill.log
+
+samtools index shovill.bam 2>&1 | sed 's/^/[samtools-index] /' | tee -a shovill.log
+```
+
+### Pilon
+```
+pilon --genome spades.fasta --frags shovill.bam --minmq 60 --minqual 3 --fix bases --output pilon --threads 8 --changes --mindepth 0.25 2>&1 | sed 's/^/[pilon] /' | tee -a shovill.log
 ```
 
 #### Annotation - Prokka 1.14.5
