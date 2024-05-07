@@ -113,8 +113,21 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 
 ## Reads_QC 
 #### Fastq Stats - FastQC 0.73
+```
+ln -s 'R1_001.fastq' 'forward' && mkdir -p 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files' && fastqc --outdir 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'   --threads ${GALAXY_SLOTS:-2} --quiet --extract  --kmers 7 -f 'fastq' 'forward'  && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*/fastqc_data.txt output.txt && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*\.html output.html
+
+ln -s 'R2_001.fastq' 'reverse' && mkdir -p 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files' && fastqc --outdir 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'   --threads ${GALAXY_SLOTS:-2} --quiet --extract  --kmers 7 -f 'fastq' 'reverse'  && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*/fastqc_data.txt output.txt && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*\.html output.html
+
+```
 #### Species/contamination prediction - kraken2
-#### Species abundance - bracken
+Kraken2 command 
+```
+kraken2 --threads ${GALAXY_SLOTS:-1} --db 'kraken2_databases/2022-03-14T135049Z_standard_prebuilt_8'    --paired 'R1_001.fastq' 'R2_001.fastq'   --confidence '0.0' --minimum-base-quality '0' --minimum-hit-groups '2'    --report 'galaxy_dataset_6891a190-e88b-45e5-ac1d-1f6b89a13cd9.dat'     > 'outputs/galaxy_dataset_a4e4ca28-ee73-409c-ad1a-9050eb9a6432.dat'
+```
+bracken command 
+```
+est_abundance.py -i 'dataset_6891a190-e88b-45e5-ac1d-1f6b89a13cd9.dat' -k 'kraken2_databases/2022-03-14T135049Z_standard_prebuilt_8/database150mers.kmer_distrib' -l S -t 10 -o 'outputs/galaxy_dataset_108d1f24-fd4e-47bc-9c44-d9944fa2d28a.dat'
+```
 
 ## ResPointFinder3 - Updated once a year
 #### ResPointFinder 4.4.2
