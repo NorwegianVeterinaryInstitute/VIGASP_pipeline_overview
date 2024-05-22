@@ -110,16 +110,37 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 ```
 
 #### ParSNP - 2.0.3
+```
+export MEMORY_LIMIT=`expr ${GALAXY_MEMORY_MB:-0} \\* 1000`; [[ $MEMORY_LIMIT -eq 0 ]] && export MEMORY_LIMIT=; export GENOME_DIR=$(mktemp -d -p `pwd`) && ln -sf '/opt/galaxy/21.09/database/objects/4/2/8/dataset_428919c7-cd31-4fe7-adfd-3cff93e9d10c.dat' $GENOME_DIR/'Mini_18EP001382_S22_L001_001' && ln -sf '/opt/galaxy/21.09/database/objects/9/2/5/dataset_92515371-a51d-4424-9ad3-be335723b037.dat' $GENOME_DIR/'Mini_18EP001394_S16_L001_001' && ln -sf '/opt/galaxy/21.09/database/objects/2/4/e/dataset_24e3b123-3d68-45d5-9693-7bb4d569bbbf.dat' $GENOME_DIR/'Mini_18EP001412_S16_L001_001' && ln -sf '/opt/galaxy/21.09/database/objects/8/4/9/dataset_849d8cfb-2b5a-4471-a042-b2f3120b8a5a.dat' $GENOME_DIR/'Mini_18EP001383_S23_L001_001' && ln -sf '/opt/galaxy/21.09/database/objects/2/6/b/dataset_26b23226-1a81-4d12-ad7a-60c9df88f142.dat' $GENOME_DIR/'Mini_18EP001411_S15_L001_001' && parsnp  -c --skip-phylogeny -u -v -o `pwd` -p ${GALAXY_SLOTS:-1} -P ${MEMORY_LIMIT:-15000000} -d "$GENOME_DIR" -r '!' -c  -u -C '100' -z '25' -D '0.12'
+```
 #### HarvestTools - 1.2.0
+```
+mkdir output_dir && harvesttools -x dataset_2b073124-118f-4f36-ba7f-8ee604ad80d7.dat -M multi_fasta_alignment.fa  2>&1
+```
 #### Gubbins - 3.2.0
+```
+ln -s '/opt/galaxy/21.09/database/objects/d/b/d/dataset_dbdcdf2f-e4a7-4b1a-a5a2-835913efcf4b.dat' foo.aln &&  run_gubbins.py  --threads ${GALAXY_SLOTS:-1}  -i '5' -z 'weighted_robinson_foulds'   --model GTRGAMMA -t 'raxml' -m '3' -f '25.0' -a '100' -b '10000' -p '0.05' --trimming-ratio '1.0'   foo.aln   && mv *branch_base_reconstruction.embl branch_base_reconstruction.embl && mv *filtered_polymorphic_sites.fasta filtered_polymorphic_sites.fasta && mv *filtered_polymorphic_sites.phylip filtered_polymorphic_sites.phylip && mv *node_labelled.final_tree.tre node_labelled.final_tree && mv *final_tree.tre final_tree.tre && mv *per_branch_statistics.csv per_branch_statistics.csv && mv *recombination_predictions.embl recombination_predictions.embl && mv *recombination_predictions.gff recombination_predictions.gff && mv *summary_of_snp_distribution.vcf summary_of_snp_distribution.vcf
+```
 #### MaskGubbins 
+```
+python tools/gubbins_mask/mask_gubbins_aln.py --aln dataset_dbdcdf2f-e4a7-4b1a-a5a2-835913efcf4b.dat --gff dataset_81867b8e-d908-478e-b074-c5c610762718.dat --out output/masked_gubbins_results.aln --missing-char N
+```
 #### SNP_SITES
+```
+snp-sites -C -o output 'dataset_65bd842b-8f1b-42f2-8a02-bd914ef98978.dat' && mv output outputs/galaxy_dataset_ef4c7b88-de5d-4d81-b533-4495f989df7e.dat
+```
+#### Expression Tools - Parse Parameter values
+```
+python _evaluate_expression_.py
+```
 #### IQ-TREE - 2.2.6
 ```
 iqtree --prefix PREF -T ${GALAXY_SLOTS:-10} --redo  -s '/opt/galaxy/21.09/database/objects/6/5/b/dataset_65bd842b-8f1b-42f2-8a02-bd914ef98978.dat'  --seqtype DNA    --seed '12345'  --keep-ident       -m 'GTR+I+F'   --mset 'HKY,GTR,SYM'  --msub 'nuclear'    --cmin '2'  --cmax '6'  --merit 'AIC'                     --ninit '100'  --ntop '20'  --nbest '5'  --nstop '100'   --radius '6'  --perturb '0.5'                    --sup-min '0.0'      --ufboot '1000'      --wbtl  --nmax '1000'  --nstep '100'  --bcor '0.99'  --beps '0.5'           -fconst '56437,47930,47833,56407'
 ```
 #### SNP Distance - 0.8.2
-
+```
+snp-dists -q    -j ${GALAXY_SLOTS:-4} 'dataset_65bd842b-8f1b-42f2-8a02-bd914ef98978.dat' > 'outputs/galaxy_dataset_1bdd63cc-5e0a-46e2-bad8-9e86c2096c7f.dat'
+```
 ## Reads_QC 
 #### Fastq Stats - FastQC 0.73
 ```
