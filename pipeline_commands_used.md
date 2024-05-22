@@ -115,6 +115,9 @@ spades.py -1 R1.fastq.gz -2 R2.fastq.gz --isolate --threads 8 --memory 4 -o spad
 #### MaskGubbins 
 #### SNP_SITES
 #### IQ-TREE - 2.2.6
+```
+iqtree --prefix PREF -T ${GALAXY_SLOTS:-10} --redo  -s '/opt/galaxy/21.09/database/objects/6/5/b/dataset_65bd842b-8f1b-42f2-8a02-bd914ef98978.dat'  --seqtype DNA    --seed '12345'  --keep-ident       -m 'GTR+I+F'   --mset 'HKY,GTR,SYM'  --msub 'nuclear'    --cmin '2'  --cmax '6'  --merit 'AIC'                     --ninit '100'  --ntop '20'  --nbest '5'  --nstop '100'   --radius '6'  --perturb '0.5'                    --sup-min '0.0'      --ufboot '1000'      --wbtl  --nmax '1000'  --nstep '100'  --bcor '0.99'  --beps '0.5'           -fconst '56437,47930,47833,56407'
+```
 #### SNP Distance - 0.8.2
 
 ## Reads_QC 
