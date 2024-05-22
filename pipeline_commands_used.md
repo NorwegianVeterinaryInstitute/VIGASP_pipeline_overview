@@ -79,7 +79,13 @@ spades.py --pe1-1 R1.fastq.gz --pe1-2 R2.fastq --only-assembler --threads 8 --me
 ```
 
 #### QUAST 5.0.2
+```
+quast --threads ${GALAXY_SLOTS:-4} -o outputdir  --min-contig 500 -l  '2024-01-4149-1-1-1-1' --contig-thresholds 0,1000 /opt/galaxy/21.09/database/objects/2/d/3/dataset_2d322def-402f-4570-b597-ff8a6ebed4da.dat 
+```
 #### MLST 2.16.1
+```
+ln -s 'dataset_2d322def-402f-4570-b597-ff8a6ebed4da.dat' '2024-01-4149-1-1-1-1' && touch "novel_alleles.fasta" &&  mlst --nopath --threads "${GALAXY_SLOTS:-1}" --minid=95 --mincov=10 --novel 'outputs/galaxy_dataset_a09d5441-87d4-4636-95f9-8216c33d6664.dat' --minscore=50 'Sample_ID' > "outputs/galaxy_dataset_8fff3fe0-234f-40bc-80ad-dc747955bf06.dat" && touch 'database/jobs_directory/000/114/114485/outputs/galaxy_dataset_a09d5441-87d4-4636-95f9-8216c33d6664.dat'
+```
 
 ## SISTR
 #### Assembly - Shovill 1.1.0     
