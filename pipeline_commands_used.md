@@ -67,7 +67,9 @@ spades.py -1 R1.fastq -2 R2.fastq --isolate --threads 8 --memory 4 -o spades --t
 ```
 
 #### spaTyper 0.3.3
-
+```
+sistr -i 'dataset_127e23d2-72f2-4add-87be-af56a36117d1.dat' '2024-01-4149-1-1-1-1' -f json -o sistr-report.json -p outputs/galaxy_dataset_f01685ef-3086-4576-af79-bfb15c458640.dat -n database/jobs_directory/000/114/114482/outputs/galaxy_dataset_b2af381a-887c-4e5b-adbe-7fdebc59ce43.dat -a outputs/galaxy_dataset_94dfb542-c29c-4309-9b82-5569821f8799.dat --use-full-cgmlst-db  --run-mash --qc --threads "${GALAXY_SLOTS:-1}" -T "${TMPDIR:-/tmp}"  -M -vv
+```
 ## MLST
 #### Assembly - Shovill 1.0.4 
 ```
