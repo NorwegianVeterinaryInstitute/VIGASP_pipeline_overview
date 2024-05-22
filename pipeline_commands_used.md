@@ -40,7 +40,14 @@ pilon --genome spades.fasta --frags shovill.bam --minmq 60 --minqual 3 --fix bas
 ```
 
 #### Annotation - Prokka 1.14.5
+```
+prokka --cpus ${GALAXY_SLOTS:-8} --quiet --outdir outdir --prefix prokka --locustag 'P' --increment 1 --gffver 3 --mincontig 200 --centre 'centre' --genus 'genus' --species 'species' --strain 'strain' --plasmid 'plasmid' --kingdom Bacteria --gcode 11 --evalue 1e-06 dataset_74c665ca-0f6e-4660-9640-c588fdbfb6ed.dat
+```
+
 #### Assembly Quality stats - Quast 5.0.2
+```
+quast -o outputdir   --min-contig 500 --threads ${GALAXY_SLOTS:-1}  --labels 2019-01-3544-3-2-lys       --min-alignment 65 --min-identity 95.0 --ambiguity-usage 'one'  --contig-thresholds '0,1000'  --extensive-mis-size 1000 --scaffold-gap-max-size 1000 --unaligned-part-size 500   'dataset_74c665ca-0f6e-4660-9640-c588fdbfb6ed.dat'  && mkdir -p 'working/dataset_654643a7-5cf6-4ed3-bc9d-ae3aa3a29659_files' && cp outputdir/*.html 'dataset_654643a7-5cf6-4ed3-bc9d-ae3aa3a29659_files' && cp -R outputdir/icarus_viewers 'dataset_654643a7-5cf6-4ed3-bc9d-ae3aa3a29659_files'
+```
 
 ## Assembly_QC    
 #### Assembly - Shovill 1.0.4  
