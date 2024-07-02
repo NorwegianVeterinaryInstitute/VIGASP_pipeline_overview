@@ -5,3 +5,9 @@ Overall:
 3. Once the job is done, galaxy returns the results to IRIDA
 
 ## 
+
+At Galaxy VM to find where "galaxy workflow are stored": 
+```
+> find . -name "*.ga"
+```
+There are no .ga files found.
