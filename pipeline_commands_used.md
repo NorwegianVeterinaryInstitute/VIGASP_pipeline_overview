@@ -197,7 +197,7 @@ python3 run_resfinder.py -ifq R1.fastq R2.fastq -s "$species_name" -o . -db_res 
 
 
 ## VirulenceFinder 
-#### VirulenceFindere 2.0.4
+#### VirulenceFinder 2.0.4
 ```
 python3 virulencefinder.py -i $input1.forward $input1.reverse -x -o output -p   virulencefinder_db/ --speciesinfo_json "{\"$species_name\":\"tax\"}" -t $identity -l $length
 ```
