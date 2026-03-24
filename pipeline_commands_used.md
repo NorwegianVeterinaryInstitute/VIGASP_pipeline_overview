@@ -204,6 +204,7 @@ python3 virulencefinder.py -i $input1.forward $input1.reverse -x -o output -p   
 ```
 ## SeroTypeFinder
 #### SeroTypeFinder 2.0.2
+#### SerotyTypeFinder DB 2.0.1 (2022-05-16, commit ID "ada62c6")
 DB location is stored in env variable (use "printenv" command inside the conda env to see the details). 
 ```
 serotypefinder -x -i $infile -l 0.60 -t 0.85
