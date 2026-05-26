@@ -151,7 +151,7 @@ iqtree --prefix PREF -T ${GALAXY_SLOTS:-10} --redo  -s '/opt/galaxy/21.09/databa
 snp-dists -q    -j ${GALAXY_SLOTS:-4} 'dataset_65bd842b-8f1b-42f2-8a02-bd914ef98978.dat' > 'outputs/galaxy_dataset_1bdd63cc-5e0a-46e2-bad8-9e86c2096c7f.dat'
 ```
 ## Reads_QC 
-#### Fastq Stats - FastQC 0.73
+#### Fastq Stats - FastQC 0.11.9
 ```
 ln -s 'R1_001.fastq' 'forward' && mkdir -p 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files' && fastqc --outdir 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'   --threads ${GALAXY_SLOTS:-2} --quiet --extract  --kmers 7 -f 'fastq' 'forward'  && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*/fastqc_data.txt output.txt && cp 'jobs_directory/096/96184/working/dataset_a0567418-d642-4cbc-9bc7-4d06337537a1_files'/*\.html output.html
 
