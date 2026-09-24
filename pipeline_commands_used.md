@@ -210,7 +210,7 @@ DB location is stored in env variable (use "printenv" command inside the conda e
 serotypefinder -x -i $infile -l 0.60 -t 0.85
 ```
 
-## IRMA 
+## IRMA 1.2.0
 ```
   irma $module $input_type.forward $input_type.reverse resultDir 2>Err_1.out
 ```
